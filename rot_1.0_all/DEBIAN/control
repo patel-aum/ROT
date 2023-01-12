@@ -1,0 +1,7 @@
+Package: rot
+Version: 1.0
+Architecture: all
+Essential: no
+Priority: optional
+Maintainer: patel-aum
+Description: A program that illustrates Rotatory Cipher
