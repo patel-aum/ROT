@@ -1,0 +1,79 @@
+ dpkg-buildpackage -us -uc -ui
+dpkg-buildpackage: info: source package rot
+dpkg-buildpackage: info: source version 1.0-1
+dpkg-buildpackage: info: source distribution unstable
+dpkg-buildpackage: info: source changed by Gokulakrishnan Shankar <gokulakrishnan@unknown>
+ dpkg-source --before-build .
+dpkg-buildpackage: info: host architecture amd64
+ fakeroot debian/rules clean
+dh clean
+   dh_clean
+ dpkg-source -b .
+dpkg-source: info: using source format '3.0 (quilt)'
+dpkg-source: info: building rot using existing ./rot_1.0.orig.tar.xz
+dpkg-source: info: building rot in rot_1.0-1.debian.tar.xz
+dpkg-source: info: building rot in rot_1.0-1.dsc
+ debian/rules build
+dh build
+   dh_update_autotools_config
+   dh_autoreconf
+   create-stamp debian/debhelper-build-stamp
+ fakeroot debian/rules binary
+dh binary
+   dh_testroot
+   dh_prep
+   dh_install
+   dh_installdocs
+   dh_installchangelogs
+   dh_perl
+   dh_link
+   dh_strip_nondeterminism
+   dh_compress
+   dh_fixperms
+   dh_missing
+   dh_installdeb
+   dh_gencontrol
+   dh_md5sums
+   dh_builddeb
+dpkg-deb: building package 'rot' in '../rot_1.0-1_all.deb'.
+ dpkg-genbuildinfo
+ dpkg-genchanges  >../rot_1.0-1_amd64.changes
+dpkg-genchanges: info: including full source code in upload
+ dpkg-source --after-build .
+dpkg-buildpackage: info: full upload (original source is included)
+Now running lintian rot_1.0-1_amd64.changes ...
+E: rot changes: bad-distribution-in-changes-file unstable
+E: rot changes: changed-by-address-malformed Gokulakrishnan Shankar <gokulakrishnan@unknown>
+E: rot: changelog-is-dh_make-template
+E: rot: copyright-contains-dh_make-todo-boilerplate
+E: rot: debian-changelog-file-contains-invalid-email-address gokulakrishnan@unknown
+E: rot source: debian-rules-is-dh_make-template
+E: rot: description-is-dh_make-template
+E: rot: helper-templates-in-copyright
+E: rot source: maintainer-address-malformed Gokulakrishnan Shankar <gokulakrishnan@unknown>
+E: rot: maintainer-address-malformed Gokulakrishnan Shankar <gokulakrishnan@unknown>
+E: rot source: readme-source-is-dh_make-template
+E: rot: section-is-dh_make-template
+W: rot source: bad-homepage <insert the upstream URL, if relevant>
+W: rot: bad-homepage <insert the upstream URL, if relevant>
+W: rot: binary-without-manpage usr/bin/rot.sh
+W: rot: copyright-has-url-from-dh_make-boilerplate
+W: rot source: dh-make-template-in-source debian/manpage.1.ex
+W: rot source: dh-make-template-in-source debian/manpage.sgml.ex
+W: rot source: dh-make-template-in-source debian/manpage.xml.ex
+W: rot source: dh-make-template-in-source debian/postinst.ex
+W: rot source: dh-make-template-in-source debian/postrm.ex
+W: rot source: dh-make-template-in-source debian/preinst.ex
+W: rot source: dh-make-template-in-source debian/prerm.ex
+W: rot source: dh-make-template-in-source debian/rot.cron.d.ex
+W: rot source: dh-make-template-in-source debian/rot.doc-base.EX
+W: rot source: dh-make-template-in-source debian/salsa-ci.yml.ex
+W: rot source: dh-make-template-in-source debian/watch.ex
+W: rot: new-package-should-close-itp-bug
+W: rot: readme-debian-contains-debmake-template
+W: rot: script-with-language-extension usr/bin/rot.sh
+W: rot source: space-in-std-shortname-in-dep5-copyright <special license> (paragraph at line 6)
+W: rot source: superfluous-clutter-in-homepage <insert the upstream URL, if relevant>
+W: rot: superfluous-clutter-in-homepage <insert the upstream URL, if relevant>
+W: rot: wrong-bug-number-in-closes l3:#nnnn
+Finished running lintian.
