@@ -1,7 +1,7 @@
 Source: rot
 Section: unknown
 Priority: optional
-Maintainer: Gokulakrishnan Shankar <gokulakrishnan@unknown>
+Maintainer: patel-aum <techtv49@gmail.com>
 Build-Depends: debhelper-compat (= 12)
 Standards-Version: 4.4.1
 Homepage: <insert the upstream URL, if relevant>
