@@ -9,15 +9,15 @@ Implementation of Rotation of caesar cipher in lunix using bin bash
 <h2>Help<h2>
 <ul>	
 	<li>Install for Ubuntu/Debian:</li>
- <li>In the installed Directory,</li>
+	<li>In the Download Directory</li>
 </ul>
-	
+
 ```
-$chmod 777 rot.sh
+$sudo apt install /rot_1.0_all.deb 
 ```
 - For Encryption,
 ```
-$./rot -e 13
+$rot.sh -e 13
 ```
 ```
 Enter message: htb
@@ -25,13 +25,14 @@ Your Output For ROT13 is ugo
 ```
 - For Decryption,
 ```
-$./rot -d 13
+$rot.sh -d 13
 ```
 ```
 Enter message: ugo
 Your Output For ROT13 is htb
 ```	
 -sample outputs
-	<div>	![image](https://user-images.githubusercontent.com/73774338/210941537-1453d7db-3098-4b02-9e6f-a57e3106ede1.png)
-	![image](https://user-images.githubusercontent.com/73774338/210941573-9eee4827-c39c-4f45-a001-8971a6e11e86.png)
+	<div>	![image](https://user-images.githubusercontent.com/73774338/213632121-18096d93-ab79-483f-beeb-4babad3cbeeb.png)
+		![image](https://user-images.githubusercontent.com/73774338/213632162-5f0571b4-ba81-453b-b6d1-dcfa7f7b9f2d.png)
+
 </div
