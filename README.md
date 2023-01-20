@@ -13,7 +13,7 @@ Implementation of Rotation of caesar cipher in lunix using bin bash
 </ul>
 
 ```
-$sudo apt install /rot_1.0_all.deb 
+$sudo apt install /rot_1.0-1_all.deb
 ```
 - For Encryption,
 ```
