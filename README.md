@@ -5,7 +5,6 @@ Implementation of Rotation of caesar cipher in lunix using bin bash
 <h2>Usage</h2>
 
     git clone https://github.com/patel-aum/ROT.git
-
 <h2>Help<h2>
 <ul>	
 	<li>Install for Ubuntu/Debian:</li>
